@@ -566,27 +566,38 @@ body {
 
 .caixinha {
     text-align: center;
+
     padding-bottom: 8rem;
 }
 
 .caixinha .botao_pop {
-    font-size: 1em;
-    padding: 15px 35px;
-    color: #fff;
+    color: var(--cor-1);
+
+    border-radius: 5rem;
+    border: 1px solid var(--cor-5);
+
+    font-size: 1.3rem;
+    padding: 1.5rem 3.5rem;
     text-decoration: none;
-    cursor: pointer;
+
     transition: all 0.3s ease-out;
-    background: #403e3d;
-    border-radius: 50px;
+}
+
+.caixinha .botao_pop:hover {
+    color: var(--cor-5);
+    cursor: pointer;
 }
 
 .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+
     position: fixed;
+    padding-top: 13rem;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
@@ -598,13 +609,12 @@ body {
 }
 
 .wrapper {
-    margin: 70px auto;
-    padding: 20px;
-    background-color: #e7e7e7;
+    margin: 7rem auto;
+    padding: 3rem;
+    background-color: var(--cor-5);
     border-radius: 5px;
     width: 30%;
     position: relative;
-    transition: all 5s ease-in-out;
 }
 
 .wrapper span {
@@ -613,14 +623,14 @@ body {
 }
 
 .wrapper .fechar {
+    color: var(--cor-3);
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 2rem;
+    right: 3rem;
     transition: all 200ms;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
     text-decoration: none;
-    color: #333;
 }
 
 .wrapper .conteudo_pop {
@@ -630,7 +640,7 @@ body {
 
 .form_cont {
     border-radius: 5px;
-    background-color: #fff;
+    background-color: var(--cor-5);
     padding: 20px 0;
 }
 
@@ -642,24 +652,27 @@ body {
 
 .form_cont form input[type=text], .form_cont form textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
+    padding: 1.2rem;
+    border: 0.3rem solid var(--cor-2);
     border-radius: 5px;
     box-sizing: border-box;
-    margin-top: 6px;
+    margin-top: 0.6rem;
     margin-bottom: 16px;
     resize: vertical;
 }
 
 .form_cont form input[type="submit"] {
-    background-color: #413b3b;
-    color: #fff;
-    padding: 15px 50px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 15px;
+    background-color: var(--cor-3);
+    color: var(--cor-1);
+
+    font-size: 1.3rem;
     text-transform: uppercase;
+
+    padding: 1.5rem 5rem;
+    border: none;
+    border-radius: 5rem;
+    
+    cursor: pointer;
 }
 /*-----------------FIM POP UP FORMULARIO--------------------*/
 
