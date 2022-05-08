@@ -20,6 +20,10 @@
     --cor-5: #a18246;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--cor-3);
 }
@@ -28,6 +32,9 @@ body {
 
 .header {
     display: flex;
+    
+    position: fixed;
+    z-index: 2;
 
     background-color: var(--cor-2);
 
@@ -101,7 +108,7 @@ body {
     background-image: url(../images/aphel_splash_anim_img.gif);
     background-position: center;
     background-size: cover;
-    background-position-y: 0.1rem;
+    background-position-y: 8rem;
     background-color: rgba(0, 0, 0, 1);
     border-color: transparent;
 
@@ -111,7 +118,7 @@ body {
     align-items: center;
     justify-content: end;
     gap: 3.2rem;
-    padding-top: 2.5rem;
+    padding-top: 40rem;
 }
 
 
@@ -182,7 +189,7 @@ body {
 
     width: 100%;
     height: 60rem;
-    padding: 7rem;
+    padding: 12rem 7rem 7rem 7rem;
 }
 
 .campeoes_relacionados, .quote_e_resumo, .regiao {
@@ -236,6 +243,13 @@ body {
     height: 13rem;
     border: 1.5px solid var(--cor-5);
     border-radius: 50%;
+    transition: 1s;
+}
+
+.sobre .campeoes_relacionados #imagem_relac_champs img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.3);
+    cursor: pointer;
 }
 
 .sobre .quote_e_resumo {
@@ -372,7 +386,8 @@ body {
     justify-content: center;
     align-items: center;
 
-    margin: 1em 1em 9em;
+    margin: 1em 1em 5em;
+    padding-top: 7rem;
 }
 
 .titulo_hab hr {
@@ -403,7 +418,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 11rem;
 }
 
 .habilidade .titulo_hab span {
@@ -511,7 +525,8 @@ body {
     align-items: center;
     width: 100%;
     height: 30rem;
-    padding-bottom: 17rem;
+    padding-top: 12rem;
+    padding-bottom: 21rem;
 }
 
 .biografia .my_info {
@@ -546,6 +561,107 @@ body {
 
 
 /*----------------FIM BIOGRAFIA---------------------*/
+
+/*----------------INICIO POP UP FORMULARIO-----------------*/
+
+.caixinha {
+    text-align: center;
+    padding-bottom: 8rem;
+}
+
+.caixinha .botao_pop {
+    font-size: 1em;
+    padding: 15px 35px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    background: #403e3d;
+    border-radius: 50px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.wrapper {
+    margin: 70px auto;
+    padding: 20px;
+    background-color: #e7e7e7;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.wrapper span {
+    margin-top: 0;
+    color: var(--cor-5);
+}
+
+.wrapper .fechar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.wrapper .conteudo_pop {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.form_cont {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.form_cont form label {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.form_cont form input[type=text], .form_cont form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.form_cont form input[type="submit"] {
+    background-color: #413b3b;
+    color: #fff;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+/*-----------------FIM POP UP FORMULARIO--------------------*/
 
 /*---------------INICIO FOOTER---------------------*/
 

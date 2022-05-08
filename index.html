@@ -17,10 +17,9 @@
                     <h1>Elo Boost</h1>
                 </div>
                 <nav class="navegacao">
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Habilidades</a></li>
-                    <li><a href="#">Sobre mim</a></li>
-                    <li><a href="#">Receber novidades</a></li>
+                    <li><a href="#sobree">Sobre</a></li>
+                    <li><a href="#tit_hab">Habilidades</a></li>
+                    <li><a href="#sb_mim">Sobre mim</a></li>
                 </nav>
             </div>
         </header>
@@ -35,14 +34,14 @@
             <span id="simbolo">∞</span>
             <hr id="segundo" />
         </div>
-        <div class="sobre">
+        <div class="sobre" id="sobree">
             <div class="campeoes_relacionados">
                 <div id="titulo">
                     <span>campeoes Relacionados</span>
                 </div>
                 <div id="imagem_relac_champs">
-                    <img src="./images/diana_sentinela.jpg" alt="Diana" />
-                    <img src="./images/leona_eclipse_lunar..jpg" alt="Leona" />
+                    <a href="https://universe.leagueoflegends.com/pt_BR/champion/leona/" target="_blank"><img src="./images/diana_sentinela.jpg" alt="Diana"/></a>
+                    <a href="https://universe.leagueoflegends.com/pt_BR/champion/diana/" target="_blank"><img src="./images/leona_eclipse_lunar..jpg" alt="Leona" /></a>
                 </div>
             </div>
             <div class="quote_e_resumo">
@@ -58,9 +57,8 @@
                     o efeito de um veneno que o emudeceu, ele é guiado por sua irmã
                     Alune, que habita um santuário distante de onde invoca um arsenal de
                     armas de pedra da lua para ajudá-lo. Enquanto a Lua brilhar no céu,
-                    Aphelios nunca estará sozinho.</span
-                        >
-                    <button type="button">Saiba mais</button>
+                    Aphelios nunca estará sozinho.</span>
+                    <button type="button"><a href="https://universe.leagueoflegends.com/pt_BR/story/champion/aphelios/" target="_blank">Saiba mais</a></button>
                 </div>
             </div>
             <div class="regiao">
@@ -70,11 +68,11 @@
                 <div class="imagem_regiao">
                     <img src="./images/targon_logo.webp" alt="Targon_imagem" />
                     <span>Targon</span>
-                    <button type="button">Visite</button>
+                    <button type="button"><a href="https://universe.leagueoflegends.com/pt_BR/region/mount-targon/" target="_blank">Saiba mais</a></button>
                 </div>
             </div>
         </div>
-        <div class="titulo_hab">
+        <div class="titulo_hab" id="tit_hab">
             <hr>
             <span>habilidades</span>
             <hr>
@@ -148,7 +146,7 @@
                 </div>
             </div>
         </div>
-        <div class="titulo_hab">
+        <div class="titulo_hab" id="sb_mim">
             <hr>
             <span>Sobre mim</span>
             <hr>
@@ -180,6 +178,29 @@
                 <li>Vários defeitos</li>
             </ul>
         </div>
+        </div>
+
+        <div class="caixinha">
+         <a href="#pop_up" class="botao_pop">Receber Mentoria</a>
+        </div>
+
+        <div class="overlay" id="pop_up">
+         <div class="wrapper">
+            <span>Preencha o formulário</span>
+            <a href="#sb_mim" class="fechar">&times;</a>
+            <div class="conteudo_pop">
+               <div class="form_cont">
+                  <form action="">
+                     <label>Nome</label>
+                     <input type="text" placeholder="Seu nome">
+                     <label>Email</label>
+                     <input type="text" placeholder="Seu email">
+                     <textarea placeholder="Me convença"></textarea>
+                     <input type="submit" value="Enviar">
+                  </form>
+               </div>
+            </div>
+         </div>
         </div>
 
         <footer>
