@@ -1,0 +1,548 @@
+@import "compass/css3";
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+
+    --cb: cubic-bezier(.05, .61, .41, .95);
+
+    --cor-1: white;
+    --cor-2: black;
+    --cor-3: #111318;
+    --cor-5: #a18246;
+}
+
+body {
+    background-color: var(--cor-3);
+}
+
+/*--------INICIO DA HEADER----------*/
+
+.header {
+    display: flex;
+
+    background-color: var(--cor-2);
+
+    width: 100%;
+    height: 8rem;
+}
+
+.interno_header {
+    display: flex;
+
+    justify-content: space-between;
+    
+    width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    
+    align-items: center;
+
+    height: 100%;
+    float: left;
+}
+
+.logo h1 {
+
+    color: var(--cor-5);
+
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    mix-blend-mode: screen;
+    vertical-align: middle;
+}
+
+.navegacao {
+    height: 100%;
+    float: right;
+}
+
+.navegacao li{
+    display: flex;
+    
+    margin-top: 2.5rem;
+    float: left;
+    padding: 0 1.4rem;
+}
+
+.navegacao  li a{
+    display: table-cell;
+
+    color: var(--cor-1);
+
+    font-size: 1.6rem;
+    height: 100%;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.navegacao li a:hover {
+    color: var(--cor-5);
+}
+
+/*------------FIM DA HEADER------------*/
+
+.text_bv {
+    display: flex;
+    position: relative;
+
+    background-image: url(../images/aphel_splash_anim_img.gif);
+    background-position: center;
+    background-size: cover;
+    background-position-y: 0.1rem;
+    background-color: rgba(0, 0, 0, 1);
+    border-color: transparent;
+
+    width: 100%;
+    height: 32rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 3.2rem;
+    padding-top: 2.5rem;
+}
+
+
+.text_bv .overlay_splash {
+    z-index: 1;
+}
+
+.text_bv #titulo {
+    color: var(--cor-5);
+    font-family: 'Roboto Slab', serif;
+
+    font-size: 9.2rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px black;
+}
+
+.text_bv_desc {
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 2.5rem;
+}
+
+.text_bv_desc span {
+    color: var(--cor-1);
+
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+/*-------------- BORDA HR ----------------*/
+
+.separador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1em 1em 10em;
+}
+
+.separador hr{
+
+    height: 1px;
+    width: 40%;
+    background: var(--cor-5);
+    border: none;
+    outline: none;
+    position: relative;
+
+}
+
+.separador span {
+    color: var(--cor-1);
+
+    font-size: 3em; 
+    padding: 0.3em 1em ;
+}
+
+/*-------------FIM BORDA HR --------------*/
+
+/*-----------INICIO SOBRE------------------*/
+
+.sobre {
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 60rem;
+    padding: 7rem;
+}
+
+.campeoes_relacionados, .quote_e_resumo, .regiao {
+    padding: 0.8rem;
+}
+
+.sobre .campeoes_relacionados {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 20%;
+}
+
+.sobre .campeoes_relacionados #titulo {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1.5px solid var(--cor-5);
+
+    width: 100%;
+    height: 10%;
+}
+
+.sobre .campeoes_relacionados #titulo span {
+    color: var(--cor-1);
+
+    padding-top: 0.9rem;
+
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.sobre .campeoes_relacionados #imagem_relac_champs {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+    border: 1.5px solid var(--cor-5);
+
+    width: 100%;
+    height: 90%;
+}
+
+.sobre .campeoes_relacionados #imagem_relac_champs img {
+    width: 13rem;
+    height: 13rem;
+    border: 1.5px solid var(--cor-5);
+    border-radius: 50%;
+}
+
+.sobre .quote_e_resumo {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 60%;
+}
+
+.sobre .quote_e_resumo #quote_alune {
+    color: var(--cor-1);
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1.5px solid var(--cor-5);
+
+    font-size: 1.6rem;
+
+    padding: 50px;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.5rem;
+    width: 100%;
+    height: 15%;
+}
+
+.sobre .quote_e_resumo #quote_alune span:nth-child(2) {
+    color: var(--cor-5);
+}
+
+.sobre .quote_e_resumo #resumo_biog {
+    color: var(--cor-1);
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1.5px solid var(--cor-5);
+
+    font-size: 1.3rem;
+
+    padding: 50px;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    gap: 4rem;
+    width: 100%;
+    height: 85%;
+}
+
+.sobre .quote_e_resumo #resumo_biog button {
+    border: 2px solid var(--cor-5);
+    background-color: var(--cor-3);
+    color: var(--cor-1);
+
+    padding: 1.3rem;
+
+    border-radius: 23px;
+}
+
+.sobre .regiao {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 20%;
+}
+
+.sobre .regiao .nome_regiao {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1.5px solid var(--cor-5);
+
+    width: 100%;
+    height: 10%;
+}
+
+.sobre .regiao .nome_regiao span {
+
+    color: var(--cor-1);
+    font-size: 1rem;
+}
+
+.sobre .regiao .imagem_regiao {
+    color: var(--cor-5);
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border: 1.5px solid var(--cor-5);
+
+    width: 100%;
+    height: 90%;
+}
+
+.sobre .regiao .imagem_regiao span {
+    text-transform: uppercase;
+    font-size: 3.6rem;
+}
+
+.sobre .regiao .imagem_regiao img {
+    width: 15rem;
+    height: 15rem;
+}
+
+.sobre .regiao .imagem_regiao button {
+    border: 2px solid var(--cor-5);
+    background-color: var(--cor-3);
+    color: var(--cor-1);
+
+    padding: 1.3rem;
+
+    border-radius: 23px;
+} 
+
+/*-----------------FIM SOBRE-----------------*/
+
+/*-------------------INICIO SEPARADOR-----------*/
+
+.titulo_hab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1em 1em 5em;
+}
+
+.titulo_hab hr {
+    height: 1px;
+    width: 35%;
+    background: var(--cor-5);
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+.titulo_hab span {
+    color: var(--cor-5);
+
+    font-size: 3em; 
+    padding: 0.3em 1em ;
+
+    text-transform: uppercase;
+}
+
+/*------------------FIM SEPARADOR------------------*/
+
+/*--------------INICIO HABILIDADES------------*/
+
+.habilidade {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 11rem;
+}
+
+.habilidade .titulo_hab span {
+    color: var(--cor-5);
+    font-size: 2.6rem;
+    text-transform: uppercase;
+}
+
+.cards {
+    display: flex;
+    max-width: 800px;
+    width: calc(100% - 100px);
+    height: 400px;
+  }
+  
+  .cards .card .info .title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .cards .card .label .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    height: 40px;
+    background-color: var(--cor-5);
+    color: var(--color);
+    border-radius: 50%;
+  }
+  
+  .cards .card .label .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    white-space: pre;
+    transition: 1s var(--cb);
+  }
+  
+  .cards .card {
+    position: relative;
+    min-width: 60px;
+    background: var(--bg);
+    overflow: hidden;
+    margin: 5px;
+    background-size: auto 150%;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s var(--cb);
+    border-radius: 30px;
+  }
+  
+  .cards .card .label {
+    display: flex;
+    position: absolute;
+    right: 0;
+    height: 40px;
+    transition: 0.5s var(--cb);
+  }
+  
+  .cards .card.active .label {
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .cards .card.active {
+    flex-grow: 10000;
+    background-size: auto 100%;
+  }
+  
+  .cards .card:not(.active) .label {
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .cards .card .shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(
+      0, #0004, transparent
+    );
+  }
+  
+  .cards .card.active .info {
+    opacity: 1;
+  }
+  
+  .cards .card:not(.active) .info {
+    opacity: 0;
+  }
+
+/*--------------FIM HABILIDADES-----------------*/
+
+/*---------------INICIO BIOGRAFIA-----------------*/
+
+.biografia {
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 30rem;
+}
+
+.biografia .my_info {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.biografia .my_info span {
+    font-size: 1.6rem;
+    color: var(--cor-1);
+}
+
+.biografia img {
+    width: 15rem;
+    height: 15rem;
+    border: 2px solid var(--cor-5);
+    border-radius: 50%;
+}
+
+.biografia .biog_spec {
+    font-size: 1.6rem;
+    color: var(--cor-1);
+}
+
+.biografia .biog_spec ul li {
+    padding: 0.5rem;
+}
+
+
+/*----------------FIM BIOGRAFIA---------------------*/
+
+
