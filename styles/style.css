@@ -18,6 +18,7 @@
     --cor-2: black;
     --cor-3: #111318;
     --cor-5: #a18246;
+
 }
 
 html {
@@ -26,30 +27,27 @@ html {
 
 body {
     background-color: var(--cor-3);
+    min-height: 100vh;
+    min-width: 100vh;
 }
 
 /*--------INICIO DA HEADER----------*/
 
 .header {
-    display: flex;
-    
-    position: fixed;
-    z-index: 2;
-
     background-color: var(--cor-2);
 
-    width: 100%;
-    height: 8rem;
-}
-
-.interno_header {
     display: flex;
 
     justify-content: space-between;
-    
-    width: 120rem;
-    height: 100%;
-    margin: 0 auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8rem;
+    z-index: 2;
+
+    padding: 1.5rem 10rem;
 }
 
 .logo {
@@ -59,29 +57,34 @@ body {
 
     height: 100%;
     float: left;
+
+    gap: 1.5rem;
 }
 
-.logo h1 {
+.logo span {
 
     color: var(--cor-5);
 
     font-size: 3.2rem;
     text-transform: uppercase;
+    font-weight: bold;
     mix-blend-mode: screen;
     vertical-align: middle;
 }
 
 .navegacao {
+    display: flex;
+    
+    align-items: center;
     height: 100%;
+
     float: right;
+    gap: 5rem;
 }
 
 .navegacao li{
-    display: flex;
     
-    margin-top: 2.5rem;
     float: left;
-    padding: 0 1.4rem;
 }
 
 .navegacao  li a{
@@ -89,10 +92,10 @@ body {
 
     color: var(--cor-1);
 
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     height: 100%;
     vertical-align: middle;
-    margin: auto;
+    transition: 500ms;
 }
 
 .navegacao li a:hover {
@@ -100,6 +103,8 @@ body {
 }
 
 /*------------FIM DA HEADER------------*/
+
+/*-----------------INICIO BACK VIDEO ---------*/
 
 .text_bv {
     display: flex;
@@ -113,7 +118,7 @@ body {
     border-color: transparent;
 
     width: 100%;
-    height: 32rem;
+    height: 60rem;
     flex-direction: column;
     align-items: center;
     justify-content: end;
@@ -146,11 +151,13 @@ body {
 .text_bv_desc span {
     color: var(--cor-1);
 
-    font-size: 1.6rem;
+    font-size: 2.1rem;
     text-transform: uppercase;
 }
 
-/*-------------- BORDA HR ----------------*/
+/*-------------FIM BACK VIDEO ------------------*/
+
+/*----------------INICIO SEPARADOR--------------*/
 
 .separador {
     display: flex;
@@ -162,7 +169,7 @@ body {
 
 .separador hr{
 
-    height: 1px;
+    height: 0.1rem;
     width: 40%;
     background: var(--cor-5);
     border: none;
@@ -178,7 +185,8 @@ body {
     padding: 0.3em 1em ;
 }
 
-/*-------------FIM BORDA HR --------------*/
+/*-------------------FIM SEPARADOR-----------------*/
+
 
 /*-----------INICIO SOBRE------------------*/
 
@@ -188,7 +196,7 @@ body {
     align-items: center;
 
     width: 100%;
-    height: 60rem;
+    height: 80rem;
     padding: 12rem 7rem 7rem 7rem;
 }
 
@@ -207,6 +215,8 @@ body {
 .sobre .campeoes_relacionados #titulo {
     display: flex;
 
+    flex-direction: row;
+
     align-items: center;
     justify-content: center;
 
@@ -214,6 +224,7 @@ body {
 
     width: 100%;
     height: 10%;
+    gap: 0.5rem;
 }
 
 .sobre .campeoes_relacionados #titulo span {
@@ -221,7 +232,7 @@ body {
 
     padding-top: 0.9rem;
 
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
 
@@ -239,8 +250,8 @@ body {
 }
 
 .sobre .campeoes_relacionados #imagem_relac_champs img {
-    width: 13rem;
-    height: 13rem;
+    width: 17rem;
+    height: 17rem;
     border: 1.5px solid var(--cor-5);
     border-radius: 50%;
     transition: 1s;
@@ -268,9 +279,10 @@ body {
 
     border: 1.5px solid var(--cor-5);
 
-    font-size: 1.6rem;
+    font-size: 2.1rem;
+    font-style: italic;
 
-    padding: 50px;
+    padding: 1.5rem;
 
     align-items: center;
     justify-content: center;
@@ -278,6 +290,16 @@ body {
     gap: 1.5rem;
     width: 100%;
     height: 15%;
+}
+
+.sobre .quote_e_resumo #quote_alune .textos_quote {
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .sobre .quote_e_resumo #quote_alune span:nth-child(2) {
@@ -292,9 +314,9 @@ body {
 
     border: 1.5px solid var(--cor-5);
 
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 
-    padding: 50px;
+    padding: 5rem;
 
     align-items: center;
     justify-content: center;
@@ -305,14 +327,22 @@ body {
     height: 85%;
 }
 
-.sobre .quote_e_resumo #resumo_biog button {
+.sobre .quote_e_resumo #resumo_biog a {
     border: 2px solid var(--cor-5);
     background-color: var(--cor-3);
     color: var(--cor-1);
 
+    font-size: 1.4rem;
+
     padding: 1.3rem;
 
     border-radius: 23px;
+
+    transition: 500ms;
+}
+
+.sobre .quote_e_resumo #resumo_biog a:hover {
+    color: var(--cor-5);
 }
 
 .sobre .regiao {
@@ -339,7 +369,9 @@ body {
 .sobre .regiao .nome_regiao span {
 
     color: var(--cor-1);
-    font-size: 1rem;
+    font-size: 1.5rem;
+
+    text-transform: uppercase;
 }
 
 .sobre .regiao .imagem_regiao {
@@ -367,15 +399,23 @@ body {
     height: 15rem;
 }
 
-.sobre .regiao .imagem_regiao button {
+.sobre .regiao .imagem_regiao a {
     border: 2px solid var(--cor-5);
     background-color: var(--cor-3);
     color: var(--cor-1);
 
+    font-size: 1.4rem;
+
     padding: 1.3rem;
 
     border-radius: 23px;
-} 
+
+    transition: 500ms;
+}
+
+.sobre .regiao .imagem_regiao a:hover {
+    color: var(--cor-5);
+}
 
 /*-----------------FIM SOBRE-----------------*/
 
@@ -391,7 +431,7 @@ body {
 }
 
 .titulo_hab hr {
-    height: 1px;
+    height: 0.1rem;
     width: 35%;
     background: var(--cor-5);
     border: none;
@@ -428,25 +468,34 @@ body {
 
 .cards {
     display: flex;
-    max-width: 800px;
-    width: calc(100% - 100px);
-    height: 400px;
+    max-width: 100rem;
+    width: calc(100% - 10rem);
+    height: 50rem;
   }
   
   .cards .card .info .title {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.9rem;
+  }
+
+  .cards .card .info .desc {
+      font-size: 1.4rem;
   }
   
   .cards .card .label .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 40px;
-    height: 40px;
+    min-width: 4rem;
+    height: 4rem;
     background-color: var(--cor-5);
     color: var(--color);
     border-radius: 50%;
+  }
+
+  .cards .card .label .icon ion-icon {
+    width: 2.5rem;
+    height: 2.5rem;
   }
   
   .cards .card .label .info {
@@ -454,35 +503,35 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 10px;
+    margin-left: 1rem;
     white-space: pre;
     transition: 1s var(--cb);
   }
   
   .cards .card {
     position: relative;
-    min-width: 60px;
+    min-width: 6rem;
     background: var(--bg);
     overflow: hidden;
-    margin: 5px;
+    margin: 0.5rem;
     background-size: auto 150%;
     background-position: center;
     cursor: pointer;
     transition: 0.5s var(--cb);
-    border-radius: 30px;
+    border-radius: 3rem;
   }
   
   .cards .card .label {
     display: flex;
     position: absolute;
     right: 0;
-    height: 40px;
+    height: 4rem;
     transition: 0.5s var(--cb);
   }
   
   .cards .card.active .label {
-    bottom: 20px;
-    left: 20px;
+    bottom: 2rem;
+    left: 2rem;
   }
   
   .cards .card.active {
@@ -491,8 +540,8 @@ body {
   }
   
   .cards .card:not(.active) .label {
-    bottom: 10px;
-    left: 10px;
+    bottom: 1rem;
+    left: 1rem;
   }
   
   .cards .card .shadow {
@@ -500,7 +549,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 10rem;
     background: linear-gradient(
       0, #0004, transparent
     );
@@ -514,6 +563,45 @@ body {
     opacity: 0;
   }
 
+  .highlight {
+    display: flex;
+    flex-direction: column;
+
+    height: 90rem;
+
+    padding: 5rem;
+
+    gap: 2rem;
+  }
+
+  .highlight video {
+      border: 1px solid var(--cor-5);
+  }
+
+  .highlight .pt1 {
+    display: flex;
+
+    gap: 2rem;
+  }
+
+  .highlight .pt1 video {
+    width: 60rem;
+    height: 30rem;
+  }
+
+  .highlight .pt2 {
+    display: flex;
+
+    gap: 2rem;
+}
+
+.highlight .pt2 video {
+    width: 60rem;
+    height: 30rem;
+}
+
+
+
 /*--------------FIM HABILIDADES-----------------*/
 
 /*---------------INICIO BIOGRAFIA-----------------*/
@@ -524,7 +612,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 30rem;
+    height: 40rem;
     padding-top: 12rem;
     padding-bottom: 21rem;
 }
@@ -539,19 +627,19 @@ body {
 }
 
 .biografia .my_info span {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     color: var(--cor-1);
 }
 
 .biografia img {
-    width: 15rem;
-    height: 15rem;
+    width: 25rem;
+    height: 25rem;
     border: 2px solid var(--cor-5);
     border-radius: 50%;
 }
 
 .biografia .biog_spec {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     color: var(--cor-1);
 }
 
@@ -576,7 +664,7 @@ body {
     border-radius: 5rem;
     border: 1px solid var(--cor-5);
 
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 1.5rem 3.5rem;
     text-decoration: none;
 
@@ -641,23 +729,23 @@ body {
 .form_cont {
     border-radius: 5px;
     background-color: var(--cor-5);
-    padding: 20px 0;
+    padding: 2rem 0;
 }
 
 .form_cont form label {
     text-transform: uppercase;
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing: 0.3rem;
 }
 
 .form_cont form input[type=text], .form_cont form textarea {
     width: 100%;
     padding: 1.2rem;
     border: 0.3rem solid var(--cor-2);
-    border-radius: 5px;
+    border-radius: 0.5rem;
     box-sizing: border-box;
     margin-top: 0.6rem;
-    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
     resize: vertical;
 }
 
@@ -718,3 +806,217 @@ footer .redes_sociais ion-icon {
 }
 
 /*----------------FIM FOOTER--------------------------*/
+
+
+/*------------------- INICIO RESPONSIVIDADE-----------------------*/
+
+@media (max-width: 1330px) {
+
+    .text_bv {
+        background-image: url(../images/aphel_menor.png);
+    }
+
+    .cards {
+        width: 90rem;
+        width: calc(100% - 10rem);
+        height: 50rem;
+      }
+
+    .highlight {
+        height: 130rem;
+    }
+
+    .highlight .pt1 {
+        flex-direction: column;
+    }
+    .highlight .pt2 {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sobre .campeoes_relacionados #titulo{
+        flex-direction: column;
+    }
+
+    .sobre .campeoes_relacionados #titulo span {
+        padding-top: 0.9rem;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    .sobre .campeoes_relacionados #imagem_relac_champs img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .sobre .campeoes_relacionados #imagem_relac_champs img:hover {
+        transform: scale(1.2);
+    }
+    
+    .sobre .quote_e_resumo #quote_alune {
+        font-size: 1.6rem;
+    }
+
+    .sobre .quote_e_resumo #resumo_biog {
+        font-size: 1.5rem;
+    }
+
+    .sobre .regiao .imagem_regiao img {
+        height: 13rem;
+        width: 13rem;
+    }
+
+    .sobre .regiao .imagem_regiao span {
+        font-size: 3.2rem;
+    }
+
+    .cards {
+        max-width: 80rem;
+        width: calc(100% - 10rem);
+        height: 40rem;
+    }
+
+      .highlight .pt1 video {
+        width: 50rem;
+        height: 29rem;
+    }
+
+    .highlight .pt2 video {
+        width: 50rem;
+        height: 29rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navegacao {
+        visibility: hidden;
+    }
+
+    .sobre .campeoes_relacionados #titulo {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .sobre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 160rem;
+    }
+
+    .sobre .campeoes_relacionados {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 80%;
+    }
+
+    .sobre .campeoes_relacionados #titulo {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 6rem;
+        gap: 1.5rem;
+    }
+
+    .sobre .campeoes_relacionados #titulo span {
+        font-size: 1.7rem;
+        text-transform: uppercase;
+    }
+
+    .sobre .campeoes_relacionados #imagem_relac_champs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        border: 0.15rem solid var(--cor-5);
+        width: 100%;
+        height: 25rem;
+    }
+
+    .sobre .campeoes_relacionados #imagem_relac_champs img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .sobre .quote_e_resumo {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 80%;
+    }
+
+    .sobre .quote_e_resumo #quote_alune {
+        padding: 4.7rem;
+    }
+
+    .sobre .quote_e_resumo #resumo_biog {
+        font-size: 1.7rem;
+    }
+
+    .sobre .quote_e_resumo #resumo_biog a {
+        padding: 1.5rem;
+        margin-bottom: -4.5rem;
+    }
+
+    .sobre .regiao {
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+        width: 80%;
+
+        padding-top: 8rem;
+    }
+
+    .sobre .regiao .nome_regiao {
+        height: 5rem;
+    }
+
+    .sobre .regiao .nome_regiao span {
+        color: var(--cor-1);
+        font-size: 1.9rem;
+    }
+
+    .sobre .regiao .imagem_regiao img {
+        margin-top: 4.5rem;
+
+        height: 13rem;
+        width: 13rem;
+    }
+
+    .sobre .regiao .imagem_regiao a {
+        margin-bottom: 4.5rem;
+    }
+
+    .cards {
+        max-width: 70rem;
+        width: calc(100% - 10rem);
+        height: 30rem;
+    }
+
+    .biografia {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 90rem;
+        padding-top: 12rem;
+        padding-bottom: 21rem;
+    }
+
+    .highlight .pt1 video {
+        width: 50rem;
+        height: 29rem;
+    }
+
+    .highlight .pt2 video {
+        width: 50rem;
+        height: 29rem;
+    }
+}
