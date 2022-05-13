@@ -40,9 +40,7 @@ body {
 
     justify-content: space-between;
 
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: sticky;
     width: 100%;
     height: 8rem;
     z-index: 2;
@@ -113,8 +111,9 @@ body {
     background-image: url(../images/aphel_splash_anim_img.gif);
     background-position: center;
     background-size: cover;
-    background-position-y: 8rem;
+    background-position-y: 1rem;
     background-color: rgba(0, 0, 0, 1);
+    background-repeat: no-repeat;
     border-color: transparent;
 
     width: 100%;
